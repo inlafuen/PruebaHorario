@@ -15,29 +15,37 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save" />
+            android:src="@drawable/ic_save_timetable"
+            android:onClick="onClick"
+            android:backgroundTint="#FF6200EE"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/load_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Load" />
+            android:src="@drawable/ic_load_timetable"
+            android:onClick="onClick"
+            android:backgroundTint="#FF6200EE"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/add_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:src="@drawable/ic_add_event"
+            android:onClick="onClick"
+            android:backgroundTint="#FF6200EE"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/clear_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear" />
+            android:src="@drawable/ic_basura"
+            android:onClick="onClick"
+            android:backgroundTint="#FF6200EE"/>
 
     </LinearLayout>
 
