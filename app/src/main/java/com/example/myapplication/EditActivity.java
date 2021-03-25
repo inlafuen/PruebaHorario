@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -40,11 +41,15 @@ private int mode;
 
 private Schedule schedule;
 private int editIdx;
-
+        private Spinner coloresSpinner;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
+        coloresSpinner=(Spinner)findViewById(R.id.color_edit);
+        String [] colores={"Rojo","Verde","Azul","Gris","Naranja","Morado","Marron"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,colores);
+        coloresSpinner.setAdapter(adapter);
         init();
         }
 
@@ -68,7 +73,7 @@ private void init(){
         initView();
         }
 
-/** check whether the mode is ADD or EDIT */
+
 private void checkMode(){
         Intent i = getIntent();
         mode = i.getIntExtra("mode",MainActivity.REQUEST_ADD);
