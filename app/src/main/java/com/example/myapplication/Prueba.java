@@ -11,6 +11,7 @@ import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
@@ -140,19 +141,39 @@ public class Prueba extends  TimetableView {
         int size = stickers.size();
         int[] orders = new int[size];
         int i = 0;
+        String colorString=" ";
+        Spinner mySpinner =findViewById(R.id.color_edit);
+        String text = mySpinner.getSelectedItem().toString();
         for (int key : stickers.keySet()) {
             orders[i++] = key;
         }
         Arrays.sort(orders);
-
-        int colorSize = stickerColors.length;
-
+        if(text=="Rojo") {
+            colorString = "#FFFA1707";
+        }
+        if(text=="Azul") {
+            colorString= "#FF3F51B5";
+        }
+        if(text=="Gris") {
+            colorString="#FF959090";
+        }
+        if(text=="Verde") {
+           colorString="#FF4CAF50";
+        }
+        if(text=="Naranja") {
+            colorString=">#FFFF5722";
+        }
+        if(text=="Morado") {
+            colorString="#FF9C27B0";
+        }
+        if(text=="Marron") {
+            colorString="#FF975540";
+        }
         for (i = 0; i < size; i++) {
             for (TextView v : stickers.get(orders[i]).getView()) {
-                v.setBackgroundColor(Color.parseColor(stickerColors[i % (colorSize)]));
+                v.setBackgroundColor(Color.parseColor(colorString));
             }
         }
-
     }
 
 

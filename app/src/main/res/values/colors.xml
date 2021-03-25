@@ -10,11 +10,11 @@
 
 
 
-    <color name="rojo"></color>
-    <color name="naranja"></color>
-    <color name="verde"></color>
-    <color name="azul"></color>
-    <color name="morado"></color>
-    <color name="gris"></color>
-    <color name="marron"></color>
+    <color name="rojo">#FFFA1707</color>
+    <color name="naranja">#FFFF5722</color>
+    <color name="verde">#FF4CAF50</color>
+    <color name="azul">#FF3F51B5</color>
+    <color name="morado">#FF9C27B0</color>
+    <color name="gris">#FF959090</color>
+    <color name="marron">#FF975540</color>
 </resources>
